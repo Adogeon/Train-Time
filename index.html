@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Train Schedule</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+
+  <div class="jumbotron">
+      <h1 class="text-center">
+        <strong>
+          <i class="fa fa-train-o"></i> Train Schedule</strong>
+      </h1>
+    </div>
+
+  <div class="container">
+
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <strong>
+                  <i class="fa fa-table"></i> Train Schedule</strong>
+                  <span id="curren-time>"></span>
+              </div>
+    
+              <div class="card-body table">
+                <table class ="table">
+                        <thead class = "strong bg-info text-light">
+                                <td><strong>Train Name</strong></td>
+                                <td><strong>Destination</strong></td>
+                                <td><strong>Next Trip</strong></td>
+                                <td><strong>Waiting Time</strong></td>
+                                <td><strong>Frequency</strong></td>
+                            </thead>
+                        <tbody id="train-table">
+                        </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+    <br>
+    <br>
+    
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <strong>Add Train</strong>
+          </div>
+          <div class="card-body">
+            <form role="form">
+
+              <div class="form-group">
+                <label for="name-input">Train Name:</label>
+                <input type="text" class="form-control" id="name-input">
+              </div>
+
+              <div class="form-group">
+                  <label for="dest-input">Destination:</label>
+                  <input type="text" class="form-control" id="dest-input">
+              </div>
+
+              <div class="form-group">
+                  <label for="start-input">Start Time (HH:MM):</label>
+                  <input type="text" class="form-control" id="start-input">
+              </div>
+
+              <div class="form-group">
+                  <label for="freq-input">Frequent (MINUTES):</label>
+                  <input type="number" class="form-control" id="freq-input">
+              </div>
+
+              <button type = "submit" clas="btn btn-default" id="add-button">Submit</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <!-- Code to the JavaScript File -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
